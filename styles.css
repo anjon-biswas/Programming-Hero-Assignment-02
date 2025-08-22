@@ -13,32 +13,53 @@
 
 .header-class {
     max-width: 1400px;
-    margin: auto;
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
-.header-home {
-    font-weight: bold;
-    color: rgba(37, 36, 50, 1);
+.header-image img {
+    height: 40px;
 }
 
-.header-info {
-    text-decoration: none;
-    color: rgba(137, 135, 161, 1);
-
-}
-
+/* Navigation List */
 .header-ul {
     list-style: none;
     display: flex;
     gap: 40px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-a:link {
+.header-ul li a {
+    font-size: 16px;
+    color: rgba(137, 135, 161, 1);
     text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s;
+}
+
+.nav-home.active {
+    font-weight: bold;
+    color: rgba(37, 36, 50, 1);
+}
+
+.nav-cart {
+    color: rgba(37, 36, 50, 1);
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 /* Banner Section Styles */
@@ -71,7 +92,7 @@ a:link {
 }
 
 .deals-para {
-    font-family:'Inter';
+    font-family: 'Inter';
     font-weight: 500;
     font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.5);
@@ -171,7 +192,7 @@ a:link {
     position: absolute;
     top: -80px;
     right: -80px;
-    width:200px;
+    width: 200px;
 }
 
 /* Content */
@@ -206,7 +227,7 @@ a:link {
     gap: 20px;
     max-width: 1200px;
     margin: auto;
-    margin-bottom:100px;
+    margin-bottom: 100px;
 }
 
 .left-offers {
@@ -262,7 +283,7 @@ a:link {
 .banner {
     background: url('assets/news-letter-bg.png') no-repeat center center/cover;
     height: 350px;
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,7 +291,7 @@ a:link {
     color: #fff;
     text-align: center;
     /* padding: 20px; */
-    margin:0;
+    margin: 0;
 }
 
 .banner h1 {
@@ -313,8 +334,8 @@ a:link {
 
 /* Footer Section */
 .footer {
-    margin-left:50px;
-    margin-right:50px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 100px;
     /* padding: 20px 20px; */
     display: flex;
@@ -387,9 +408,33 @@ a:link {
 /* Mobile Device */
 @media screen and (max-width: 576px) {
 
-    .banner-first{
+    .header-class {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-links {
+        display: none;
+    }
+
+    .cart-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-cart {
+        font-size: 15px;
+    }
+
+    .cart-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .banner-first {
         flex-direction: column;
     }
+
     .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -421,7 +466,7 @@ a:link {
 
     .footer-links {
         width: 100%;
-        justify-content:left;
+        justify-content: left;
         flex-direction: column;
         gap: 50px;
         margin: 0;
@@ -431,4 +476,3 @@ a:link {
         margin-top: 10px;
     }
 }
-
