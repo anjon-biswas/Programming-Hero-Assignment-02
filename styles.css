@@ -43,7 +43,7 @@ a:link {
 
 /* Banner Section Styles */
 
-.banner {
+.banner-first {
     max-width: 1400px;
     margin: auto;
     margin-top: 100px;
@@ -200,6 +200,7 @@ a:link {
     gap: 20px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom:100px;
 }
 
 .left-offers {
@@ -251,6 +252,131 @@ a:link {
     font-weight: bold;
 }
 
+/* Banner Section */
+.banner {
+    background: url('assets/news-letter-bg.png') no-repeat center center/cover;
+    height: 350px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    /* padding: 20px; */
+    margin:0;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-box {
+    display: flex;
+    width: 60%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.subscribe-box input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.subscribe-box button {
+    padding: 12px 20px;
+    background: #f26522;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-box button:hover {
+    background: #d9531e;
+}
+
+/* Footer Section */
+.footer {
+    background: #f9fafc; /* Matches your screenshot's light grey */
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-left img {
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    color: #555;
+    font-size: 15px;
+    max-width: 280px;
+}
+
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    min-width: 300px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f26522;
+}
+
+/* Social Icons aligned right */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-social a img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+}
+
 /* Mobile Device */
 @media screen and (max-width: 576px) {
     .container {
@@ -261,6 +387,21 @@ a:link {
     .offer-section {
         grid-template-columns: 1fr;
     }
-    
 
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 50px;
+        margin: 20px 0;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
 }
+
