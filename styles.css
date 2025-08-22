@@ -71,8 +71,10 @@ a:link {
 }
 
 .deals-para {
+    font-family:'Inter';
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* Flowers card section styles */
@@ -128,49 +130,51 @@ a:link {
     background-color: #c74a05;
 }
 
-/* Plant and Flowers lover styles */
-
+/* Section Layout */
 .section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    max-width: 1400px;
-    margin: auto;
-    margin-top: 100px;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
     flex-wrap: wrap;
 }
 
+/* Image Container */
 .image-container {
     position: relative;
     width: 500px;
     min-width: 280px;
 }
 
-.image-container img {
+.flower-img {
     width: 100%;
     border-radius: 6px;
     display: block;
 }
 
+/* Overlay Gradient */
 .overlay {
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     height: 40%;
     background: linear-gradient(to top, rgba(232, 92, 13, 0.8), rgba(232, 92, 13, 0));
     border-radius: 6px;
-    width: 80px;
 }
 
+/* Trusted Badge */
 .badge {
     position: absolute;
-    top: -300px;
-    right: -300px;
-    width: 80px;
+    top: -80px;
+    right: -80px;
+    width:200px;
 }
 
+/* Content */
 .content {
     max-width: 500px;
 }
@@ -192,6 +196,8 @@ a:link {
     margin-bottom: 15px;
     line-height: 1.6;
 }
+
+
 
 /* Latest Deals Image Part */
 .offer-section {
@@ -307,12 +313,13 @@ a:link {
 
 /* Footer Section */
 .footer {
-    background: #f9fafc; /* Matches your screenshot's light grey */
-    padding: 40px 60px;
+    margin-left:50px;
+    margin-right:50px;
+    margin-top: 100px;
+    /* padding: 20px 20px; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-top: 1px solid #ddd;
     gap: 30px;
     align-items: flex-start;
 }
@@ -379,10 +386,28 @@ a:link {
 
 /* Mobile Device */
 @media screen and (max-width: 576px) {
+
+    .banner-first{
+        flex-direction: column;
+    }
     .container {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .section {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .badge {
+        display: none;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
 
     .offer-section {
         grid-template-columns: 1fr;
@@ -391,13 +416,15 @@ a:link {
     .footer {
         flex-direction: column;
         align-items: flex-start;
+        justify-content: left;
     }
 
     .footer-links {
         width: 100%;
-        justify-content: flex-start;
+        justify-content:left;
+        flex-direction: column;
         gap: 50px;
-        margin: 20px 0;
+        margin: 0;
     }
 
     .footer-social {
