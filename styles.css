@@ -1,0 +1,266 @@
+/* .body-class{
+    max-width: 1440px;
+} */
+
+/* Shared Styles */
+.shared-font-color {
+    color: rgba(233, 90, 8, 1);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+/* Header styles */
+
+.header-class {
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-home {
+    font-weight: bold;
+    color: rgba(37, 36, 50, 1);
+}
+
+.header-info {
+    text-decoration: none;
+    color: rgba(137, 135, 161, 1);
+
+}
+
+.header-ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/* Banner Section Styles */
+
+.banner {
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.banner-heading {
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0;
+    /* margin-top:30px; */
+}
+
+
+/* Latest Deals styles */
+.deals-container {
+    max-width: 1400px;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.deals-para {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/* Flowers card section styles */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.card {
+    background: #fff;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+    text-align: center;
+    padding: 0;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.card button {
+    background-color: #e85c0d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: #c74a05;
+}
+
+/* Plant and Flowers lover styles */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    position: relative;
+    width: 500px;
+    min-width: 280px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+.overlay {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(232, 92, 13, 0.8), rgba(232, 92, 13, 0));
+    border-radius: 6px;
+    width: 80px;
+}
+
+.badge {
+    position: absolute;
+    top: -300px;
+    right: -300px;
+    width: 80px;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.content ul {
+    list-style-type: disc;
+    color: #555;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Latest Deals Image Part */
+.offer-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.left-offers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.offer-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover img {
+    transform: scale(1.05);
+}
+
+.offer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+}
+
+.offer-text h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.offer-text a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Mobile Device */
+@media screen and (max-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .offer-section {
+        grid-template-columns: 1fr;
+    }
+    
+
+}
